@@ -1,0 +1,9 @@
+{
+    "data": [
+        {
+            "name": "app-mfe",
+            "remoteEntry": "http://localhost:4201/remoteEntry.json",
+            "exposedModule": "./Component"
+        }
+    ]
+}

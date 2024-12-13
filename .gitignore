@@ -20,6 +20,7 @@ target/
 
 ### VS Code ###
 .vscode/
+.editorconfig
 
 ### Mac OS ###
 .DS_Store

@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { loadRemoteModule } from '@angular-architects/native-federation';
+import { LoginComponent } from './component/login/login.component';
+import { RemoteLoadComponent } from './component/remote-load/remote-load.component';
+import { RemotePageComponent } from './component/remote-page/remote-page.component';
 
 export const routes: Routes = [
     {
@@ -15,9 +16,12 @@ export const routes: Routes = [
         children: [
             { path: '', redirectTo: 'login', pathMatch: 'full' },
             { path: 'login', component: LoginComponent },
-            { path: 'remote-page', loadComponent: () => loadRemoteModule('app-frontend-remote', './Component')
-                .then((m) => m.AppComponent)
-            }
+            { path: 'remote-load', component: RemoteLoadComponent },
+            { path: 'remote-page', component: RemotePageComponent }
         ]
-    }
+    },
+    {
+        path: '**',
+        redirectTo: 'app',
+    },
 ];

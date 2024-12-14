@@ -1,0 +1,8 @@
+{
+    "remoteEntries": [
+        {
+            "name": "app-frontend-remote",
+            "remoteEntry": "http://localhost:4201/remoteEntry.json"
+        }
+    ]
+}

@@ -118,7 +118,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
         </plugins>
-
         <resources>
             <resource>
                 <directory>${basedir}/app-frontend-host/dist/app-frontend-host/browser</directory>
@@ -128,6 +127,7 @@
                 <directory>${basedir}/src/main/resources</directory>
             </resource>
         </resources>
+        <finalName>app</finalName>
     </build>
 
     <profiles>
@@ -154,6 +154,7 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
+                        <version>3.0.0</version>
                         <executions>
                             <execution>
                                 <id>angular artifact</id>

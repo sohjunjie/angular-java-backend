@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "app-frontend-host": {
+    "app-frontend-remote": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/app-frontend-host",
+            "outputPath": "dist/app-frontend-remote",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "app-frontend-host:build:production"
+              "buildTarget": "app-frontend-remote:build:production"
             },
             "development": {
-              "buildTarget": "app-frontend-host:build:development"
+              "buildTarget": "app-frontend-remote:build:development"
             }
           },
           "defaultConfiguration": "development"

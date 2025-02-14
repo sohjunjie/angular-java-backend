@@ -18,7 +18,12 @@ export class RemotePageComponent {
   ) {
 
     this.appService.loadRemoteEntryComponent$("app-frontend-remote", "./Component")
-      .subscribe(mod => this.viewContainerRef.createComponent(mod.AppComponent));
+      .subscribe(mod => {
+
+        const component: any = this.viewContainerRef.createComponent(mod.AppComponent);
+        Object.assign(component.instance, { token: 456});
+
+      });
 
   }
 

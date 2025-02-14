@@ -57,6 +57,19 @@ export class AppService {
 
   }
 
+  loadRemoteEntryUrl$(name: string): Observable<string> {
+
+    return this.loadAppDataConfig$()
+      .pipe(
+        map(config => config.remoteEntries),
+        filter(entries => entries != null),
+        map(entries => entries.find(entry => entry.name === name)),
+        filter(entry => entry != null),
+        map(entry => entry.url)
+      );
+
+  }
+
 
   loadAppDataConfig$(): Observable<AppDataConfig> {
 

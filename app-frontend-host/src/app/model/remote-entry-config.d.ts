@@ -2,6 +2,7 @@ export type RemoteEntryItem = {
 
     name: string;
     remoteEntry: string;
+    url: string;
 
 };
 
